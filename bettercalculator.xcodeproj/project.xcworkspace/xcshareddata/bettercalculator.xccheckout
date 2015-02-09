@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9EC1F012-7C14-4552-B361-11A5EC121DB2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>bettercalculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0CB15492D34CFA48308E80C997703B796C4E4F68</key>
+		<string>https://github.com/jameskhoo/BetterCalculator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>bettercalculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0CB15492D34CFA48308E80C997703B796C4E4F68</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jameskhoo/BetterCalculator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0CB15492D34CFA48308E80C997703B796C4E4F68</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0CB15492D34CFA48308E80C997703B796C4E4F68</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BetterCalculator</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -72,6 +72,10 @@ class ViewController: UIViewController {
 
     @IBAction func performClearOrReset() {
         mainDigitLabel.text = "0"
+        reset()
+    }
+    
+    func reset() {
         computeLogLabel.text = " "
         operateStack.removeAll(keepCapacity: false)
         operandStack.removeAll(keepCapacity: false)
@@ -106,8 +110,7 @@ class ViewController: UIViewController {
         performCalculation("-")
         
         displayValue = operandStack[0]
-        
-        
+        reset()
 
     }
     
