@@ -8,13 +8,13 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
  
     var userISInTheMiddleOFTypingNumber = false;
+    var calculatorEngine = CalculatorModel()
     var dotPressed = false;
-    var operandStack = Array<Double>()
-    var operateStack = Array<String>()
     @IBOutlet weak var mainDigitLabel: UILabel!
     @IBOutlet weak var computeLogLabel: UILabel!
     
@@ -31,9 +31,13 @@ class ViewController: UIViewController {
     
     @IBAction func performOperation(sender: UIButton) {
         let operation = sender.currentTitle!
-        operateStack.append(operation)
+        
+//        computeLogLabel.text!.
+        calculatorEngine.pushOperateType(operation)
+//        operateStack.append(operation)
         computeLogLabel.text = computeLogLabel.text! + operation
-        operandStack.append(displayValue)
+        calculatorEngine.pushOperand(displayValue)
+//        operandStack.append(displayValue)
         mainDigitLabel.text = " "
         userISInTheMiddleOFTypingNumber = false
         dotPressed = false
@@ -77,71 +81,29 @@ class ViewController: UIViewController {
     
     func reset() {
         computeLogLabel.text = " "
-        operateStack.removeAll(keepCapacity: false)
-        operandStack.removeAll(keepCapacity: false)
         userISInTheMiddleOFTypingNumber = false
+        calculatorEngine.performReset()
         dotPressed  = false
     }
     
     @IBAction func computeAnswer() {
         if mainDigitLabel.text != " " {
-            operandStack.append(displayValue)
+//            operandStack.append(displayValue)
+            calculatorEngine.pushOperand(displayValue)
         } else {
             // remove the last operator from the stack
             // and the computeLog
-            operateStack.removeLast()
+//            operateStack.removeLast()
+//            computeLogLabel.text.
             computeLogLabel.text = computeLogLabel.text!.substringToIndex(computeLogLabel.text!.endIndex.predecessor())
         }
-        println("operandStack = \(operandStack), operateStack = \(operateStack)")
+//        println("operandStack = \(operandStack), operateStack = \(operateStack)")
         computeLogLabel.text = computeLogLabel.text! + " = "
-        
-        // 2 * 3 + 6 * 4
-        
-        //   2 + 3 * 5 + 6 * 10 - 2
-        // -> 2 + 15 + 60 -2
-        // -> 17 + 60 -2
-        // -> 77 - 2 
-        // -> 75
-        
-        // 4 - 2 + 2 * 10
-        performCalculation("×")
-        performCalculation("÷")
-        performCalculation("+")
-        performCalculation("-")
-        
-        displayValue = operandStack[0]
+        displayValue = calculatorEngine.performEvaluation()
         reset()
 
     }
     
-    func performCalculation(oprSymbol: String) {
-//        println("-> \(oprSymbol)")
-        var index:Int = 0
-        for sym in operateStack {
-            if oprSymbol == sym {
-                var newTotal:Double = 0.0
-                switch sym {
-                case "×" :
-                    newTotal  = operandStack[index] * operandStack[index + 1]
-                case "÷" :
-                    newTotal = operandStack[index] / operandStack[index + 1]
-                case "+" :
-                    newTotal = operandStack[index] + operandStack[index + 1]
-                case "-" :
-                    newTotal = operandStack[index] - operandStack[index + 1]
-                default : break
-                }
-                println("\(operandStack[index]) \(oprSymbol) \(operandStack[index + 1]) = \(newTotal)")
-                operandStack[index] = newTotal
-                operandStack.removeAtIndex(index + 1)
-                operateStack.removeAtIndex(index)
-                println("At Calculation operandStack = \(operandStack), operateStack = \(operateStack)")
-                index--
-             }
-            index++
-        }
-        
-    }
     
  
 }
