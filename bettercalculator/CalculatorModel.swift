@@ -54,6 +54,10 @@ class CalculatorModel {
     
     
     func performEvaluation() -> Double {
+        println("Count of Operand -> \(operandStack.count), Count Operate Stack-> \(operateStack.count)")
+        if operateStack.count >= operandStack.count {
+            operateStack.removeLast()
+        }
         performCalculation("×")
         performCalculation("÷")
         performCalculation("+")
@@ -62,6 +66,7 @@ class CalculatorModel {
     }
     
     func performReset() {
+        
         operandStack.removeAll(keepCapacity: false)
         operandStack.removeAll(keepCapacity: false)
     }

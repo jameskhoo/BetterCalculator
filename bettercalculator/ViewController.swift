@@ -30,18 +30,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func performOperation(sender: UIButton) {
+        // Only allows to push the operator if the last 
+        if ( mainDigitLabel.text! != " ") {
         let operation = sender.currentTitle!
-        
-//        computeLogLabel.text!.
-        calculatorEngine.pushOperateType(operation)
-//        operateStack.append(operation)
-        computeLogLabel.text = computeLogLabel.text! + operation
-        calculatorEngine.pushOperand(displayValue)
-//        operandStack.append(displayValue)
-        mainDigitLabel.text = " "
-        userISInTheMiddleOFTypingNumber = false
-        dotPressed = false
-//        println("operandStack = \(operandStack), operateStack = \(operateStack)")
+            calculatorEngine.pushOperateType(operation)
+            computeLogLabel.text = computeLogLabel.text! + operation
+            calculatorEngine.pushOperand(displayValue)
+            mainDigitLabel.text = " "
+            userISInTheMiddleOFTypingNumber = false
+            dotPressed = false
+        }
         
     }
     
@@ -100,7 +98,7 @@ class ViewController: UIViewController {
 //        println("operandStack = \(operandStack), operateStack = \(operateStack)")
         computeLogLabel.text = computeLogLabel.text! + " = "
         displayValue = calculatorEngine.performEvaluation()
-        reset()
+//        reset()
 
     }
     
