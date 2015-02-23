@@ -6,4 +6,5 @@ I modified the original calculator code, to make the calculator more *natural* a
 * 2 * 3 + 4 * 2 = 6 + 8 = 14
 * 6 / 2 - 1 = 3 - 1 = 2
 
-I have limited understanding of iOS Autolayout, hence the current code will only work in vertical mode.
+20th-Feb-2015
+Fixed Auto Layout bugs

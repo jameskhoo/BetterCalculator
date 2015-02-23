@@ -86,19 +86,12 @@ class ViewController: UIViewController {
     
     @IBAction func computeAnswer() {
         if mainDigitLabel.text != " " {
-//            operandStack.append(displayValue)
             calculatorEngine.pushOperand(displayValue)
         } else {
-            // remove the last operator from the stack
-            // and the computeLog
-//            operateStack.removeLast()
-//            computeLogLabel.text.
             computeLogLabel.text = computeLogLabel.text!.substringToIndex(computeLogLabel.text!.endIndex.predecessor())
         }
-//        println("operandStack = \(operandStack), operateStack = \(operateStack)")
         computeLogLabel.text = computeLogLabel.text! + " = "
         displayValue = calculatorEngine.performEvaluation()
-//        reset()
 
     }
     

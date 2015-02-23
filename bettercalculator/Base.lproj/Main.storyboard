@@ -206,9 +206,9 @@
                                     <action selector="performClearOrReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="LsX-wF-Grc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-0a-vaa">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-0a-vaa">
                                 <rect key="frame" x="304" y="112" width="132" height="90"/>
-                                <color key="backgroundColor" red="0.53592155011645537" green="0.66666666666666663" blue="0.4732259852252374" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53592155011645537" green="0.66666666666666663" blue="0.4732259852252374" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="sin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -217,26 +217,15 @@
                                     <action selector="performClearOrReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZP-HR-dUB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ht-vz-TH3">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ht-vz-TH3">
                                 <rect key="frame" x="164" y="112" width="132" height="90"/>
-                                <color key="backgroundColor" red="0.53592155011645537" green="0.66666666666666663" blue="0.4732259852252374" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53592155011645537" green="0.66666666666666663" blue="0.4732259852252374" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="cos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="performClearOrReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nnv-qX-CQi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-pS-bHA">
-                                <rect key="frame" x="24" y="112" width="132" height="90"/>
-                                <color key="backgroundColor" red="0.53592155011645537" green="0.66666666666666663" blue="0.4732259852252374" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="∏">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="performClearOrReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="UdQ-Eo-P9x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6d-Vi-sS7">
@@ -248,6 +237,17 @@
                                 </state>
                                 <connections>
                                     <action selector="appendNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TDV-iB-FRV"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-pS-bHA">
+                                <rect key="frame" x="24" y="112" width="132" height="90"/>
+                                <color key="backgroundColor" red="0.53592155011645537" green="0.66666666666666663" blue="0.4732259852252374" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="∏">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performClearOrReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="UdQ-Eo-P9x"/>
                                 </connections>
                             </button>
                         </subviews>
